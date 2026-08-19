@@ -1,4 +1,4 @@
-*This activity has been created as part of the 42 curriculum by nbigot, annlecre.*
+*This activity has been created as part of the 42 curriculum by nbigot.*
 
 # 42 PUSH_SWAP
 
@@ -10,7 +10,7 @@ The students must write a progran in C called push_swap which calculates and dis
 With this project, a team of two students from 42 Paris school will discover algorithm complexity in a very concrete way.
 
 Both learners must contribute meaningfully to the project and understand all implemented algorithms. 
-For this project, the structure of the program, the operations, and two of the sorting algorithms (simple and medium) were mainly developed by nbigot, while the parsing, the bench, the data initialization and the complex algorithm were mainly written by annlecre.
+For this project, the structure of the program, the operations, and two of the sorting algorithms (simple and medium) were mainly developed by nbigot, while the parsing, the bench, the data initialization and the complex algorithm were mainly written by nbigot.
 
 **Parsing**
 

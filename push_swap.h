@@ -15,8 +15,10 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include "libft/includes/libft.h"
-# include "libft/includes/ft_printf.h"
+
+int		ft_atoi(const char *str);
+void	ft_putendl_fd(char *s, int fd);
+int		ft_printf(const char *fmt, ...);
 
 typedef struct s_stack
 {

@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   libft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: annlecre <annlecre@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: nbigot <nbigot@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/26 08:18:34 by annlecre          #+#    #+#             */
-/*   Updated: 2026/05/03 11:15:00 by annlecre         ###   ########.fr       */
+/*   Created: 2026/08/19 00:00:00 by nbigot            #+#    #+#             */
+/*   Updated: 2026/08/19 00:00:00 by nbigot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
+#include "push_swap.h"
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	sign;
-	int	res;
+	int		i;
+	int		sign;
+	long	result;
 
 	i = 0;
-	res = 0;
 	sign = 1;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+	result = 0;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
-	if (str[i] == '+' || str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
 			sign = -1;
@@ -32,17 +31,21 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = res * 10 + (str[i] - '0');
+		result = result * 10 + (str[i] - '0');
 		i++;
 	}
-	res *= sign;
-	return (res);
+	return ((int)(result * sign));
 }
-/*
-int	main(void)
+
+void	ft_putendl_fd(char *s, int fd)
 {
-	char	*str = "    \t -++-42fh  124fdg";
-	printf("%d\n", ft_atoi(str));
-	printf("%d\n", atoi(str));
-	return (0);
-}*/
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
+	write(fd, "\n", 1);
+}
